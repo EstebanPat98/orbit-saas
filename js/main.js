@@ -61,3 +61,18 @@ billingToggle.addEventListener('click', () => {
   isYearly = !isYearly;
   updateBilling();
 });
+
+/* ===== FAQ acordeón ===== */
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach((item) => {
+  const question = item.querySelector('.faq-question');
+  const answer = item.querySelector('.faq-answer');
+  const arrow = item.querySelector('.faq-arrow');
+
+  question.addEventListener('click', () => {
+    const isOpen = answer.classList.toggle('hidden') === false;
+    arrow.classList.toggle('rotate-180', isOpen);
+    question.setAttribute('aria-expanded', isOpen);
+  });
+});
