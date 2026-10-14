@@ -246,7 +246,82 @@
       </div>
     </div>
   </section>
+  
+  <!-- ===== PRECIOS ===== -->
+  <section id="precios" class="mx-auto max-w-6xl scroll-mt-20 px-6 py-24">
+    <div class="mx-auto max-w-2xl text-center">
+      <p class="text-sm font-semibold uppercase tracking-widest text-brand-500">Precios</p>
+      <h2 class="mt-3 text-3xl font-extrabold tracking-tight md:text-4xl">Un plan para cada equipo</h2>
+      <p class="mt-4 text-slate-600 dark:text-slate-400">Empieza gratis y crece cuando lo necesites.</p>
 
+      <!-- Interruptor -->
+      <div class="mt-8 inline-flex items-center gap-3 text-sm font-medium">
+        <span id="label-monthly">Mensual</span>
+        <button id="billing-toggle" role="switch" aria-checked="false" aria-label="Cambiar a facturación anual"
+          class="relative h-7 w-12 rounded-full bg-slate-300 transition dark:bg-slate-700">
+          <span id="billing-knob" class="absolute left-1 top-1 h-5 w-5 rounded-full bg-white shadow transition-transform"></span>
+        </button>
+        <span id="label-yearly" class="text-slate-500 dark:text-slate-400">
+          Anual <span class="rounded-full bg-green-500/15 px-2 py-0.5 text-xs font-semibold text-green-600 dark:text-green-400">-20%</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="mt-14 grid items-center gap-6 md:grid-cols-3">
+
+      <!-- Plan Básico -->
+      <article class="rounded-2xl border border-slate-200 bg-slate-50 p-8 dark:border-slate-800 dark:bg-slate-900">
+        <h3 class="text-lg font-bold">Básico</h3>
+        <p class="mt-1 text-sm text-slate-600 dark:text-slate-400">Para empezar a explorar.</p>
+        <p class="mt-6 flex items-end gap-1">
+          <span class="text-5xl font-extrabold">$<span class="price" data-monthly="0" data-yearly="0">0</span></span>
+          <span class="mb-1 text-sm text-slate-500">/mes</span>
+        </p>
+        <ul class="mt-6 space-y-3 text-sm">
+          <li>✓ 1 panel</li>
+          <li>✓ 3 miembros</li>
+          <li>✓ 7 días de historial</li>
+        </ul>
+        <a href="#" class="mt-8 block rounded-xl border border-slate-300 py-3 text-center font-semibold transition hover:bg-slate-100 dark:border-slate-700 dark:hover:bg-slate-800">Empezar gratis</a>
+      </article>
+
+      <!-- Plan Pro (destacado) -->
+      <article class="relative rounded-2xl border-2 border-brand-500 bg-white p-8 shadow-xl shadow-brand-500/20 dark:bg-slate-900 md:scale-105">
+        <span class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-brand-600 px-3 py-1 text-xs font-semibold text-white">Más popular</span>
+        <h3 class="text-lg font-bold">Pro</h3>
+        <p class="mt-1 text-sm text-slate-600 dark:text-slate-400">Para equipos en crecimiento.</p>
+        <p class="mt-6 flex items-end gap-1">
+          <span class="text-5xl font-extrabold">$<span class="price" data-monthly="29" data-yearly="23">29</span></span>
+          <span class="mb-1 text-sm text-slate-500">/mes</span>
+        </p>
+        <ul class="mt-6 space-y-3 text-sm">
+          <li>✓ Paneles ilimitados</li>
+          <li>✓ 20 miembros</li>
+          <li>✓ 1 año de historial</li>
+          <li>✓ Informes con IA</li>
+        </ul>
+        <a href="#" class="mt-8 block rounded-xl bg-brand-600 py-3 text-center font-semibold text-white transition hover:bg-brand-500">Probar Pro</a>
+      </article>
+
+      <!-- Plan Empresa -->
+      <article class="rounded-2xl border border-slate-200 bg-slate-50 p-8 dark:border-slate-800 dark:bg-slate-900">
+        <h3 class="text-lg font-bold">Empresa</h3>
+        <p class="mt-1 text-sm text-slate-600 dark:text-slate-400">Para organizaciones grandes.</p>
+        <p class="mt-6 flex items-end gap-1">
+          <span class="text-5xl font-extrabold">$<span class="price" data-monthly="99" data-yearly="79">99</span></span>
+          <span class="mb-1 text-sm text-slate-500">/mes</span>
+        </p>
+        <ul class="mt-6 space-y-3 text-sm">
+          <li>✓ Todo lo de Pro</li>
+          <li>✓ Miembros ilimitados</li>
+          <li>✓ Historial ilimitado</li>
+          <li>✓ Soporte prioritario</li>
+        </ul>
+        <a href="#" class="mt-8 block rounded-xl border border-slate-300 py-3 text-center font-semibold transition hover:bg-slate-100 dark:border-slate-700 dark:hover:bg-slate-800">Contactar ventas</a>
+      </article>
+
+    </div>
+  </section>
 
 </main>
 

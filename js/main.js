@@ -31,3 +31,33 @@ menuToggle.addEventListener('click', () => {
 mobileMenu.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', () => setMenu(false));
 });
+
+/* ===== Interruptor de precios ===== */
+const billingToggle = document.getElementById('billing-toggle');
+const billingKnob = document.getElementById('billing-knob');
+const labelMonthly = document.getElementById('label-monthly');
+const labelYearly = document.getElementById('label-yearly');
+const prices = document.querySelectorAll('.price');
+const periods = document.querySelectorAll('.price-period');
+
+let isYearly = false;
+
+function updateBilling() {
+  prices.forEach((price) => {
+    price.textContent = isYearly ? price.dataset.yearly : price.dataset.monthly;
+  });
+
+  billingKnob.classList.toggle('translate-x-5', isYearly);
+  billingToggle.classList.toggle('bg-brand-600', isYearly);
+  billingToggle.setAttribute('aria-checked', isYearly);
+
+  labelMonthly.classList.toggle('text-slate-500', isYearly);
+  labelMonthly.classList.toggle('dark:text-slate-400', isYearly);
+  labelYearly.classList.toggle('text-slate-500', !isYearly);
+  labelYearly.classList.toggle('dark:text-slate-400', !isYearly);
+}
+
+billingToggle.addEventListener('click', () => {
+  isYearly = !isYearly;
+  updateBilling();
+});
