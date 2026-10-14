@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Orbit: analítica simple y potente para equipos modernos.">
+  <title>Orbit | Analítica para equipos</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] },
+          colors: {
+            brand: {
+              400: '#818cf8',
+              500: '#6366f1',
+              600: '#4f46e5'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased">
+
+  <main class="min-h-screen flex flex-col items-center justify-center gap-6 px-6 text-center">
+    <h1 class="text-4xl font-extrabold md:text-6xl">
+      Hola, <span class="text-brand-500">Orbit</span>
+    </h1>
+    <p class="max-w-md text-slate-600 dark:text-slate-400">
+      Si ves esto con estilo, Tailwind está funcionando.
+    </p>
+    <a href="#" class="rounded-xl bg-brand-600 px-6 py-3 font-semibold text-white transition hover:bg-brand-500 hover:-translate-y-0.5">
+      Empezar gratis
+    </a>
+  </main>
+
+</body>
+</html>
