@@ -1,3 +1,4 @@
+/* ===== Modo oscuro ===== */
 const root = document.documentElement;
 const themeToggle = document.getElementById('theme-toggle');
 
@@ -9,17 +10,24 @@ themeToggle.addEventListener('click', () => {
   } catch (e) {}
 });
 
+/* ===== Menú móvil ===== */
 const menuToggle = document.getElementById('menu-toggle');
 const mobileMenu = document.getElementById('mobile-menu');
+const iconOpen = document.getElementById('icon-open');
+const iconClose = document.getElementById('icon-close');
+
+function setMenu(open) {
+  mobileMenu.classList.toggle('hidden', !open);
+  iconOpen.classList.toggle('hidden', open);
+  iconClose.classList.toggle('hidden', !open);
+  menuToggle.setAttribute('aria-expanded', open);
+}
 
 menuToggle.addEventListener('click', () => {
-  const isOpen = !mobileMenu.classList.toggle('hidden');
-  menuToggle.setAttribute('aria-expanded', isOpen);
+  const isOpen = mobileMenu.classList.contains('hidden');
+  setMenu(isOpen);
 });
 
 mobileMenu.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => {
-    mobileMenu.classList.add('hidden');
-    menuToggle.setAttribute('aria-expanded', 'false');
-  });
+  link.addEventListener('click', () => setMenu(false));
 });
